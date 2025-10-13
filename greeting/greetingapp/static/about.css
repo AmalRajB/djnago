@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+p{
+    width: 700px;
+    text-align: center;
+    font-size: large;
+    margin-top: 40px;
+    margin-left: 400px;
+    line-height: 30px;
+    
+}
