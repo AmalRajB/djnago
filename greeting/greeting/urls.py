@@ -4,6 +4,7 @@ from greetingapp import views
 urlpatterns = [
    
     path('home',views.greeting),
-    path('about',views.about)
+    path('about',views.about),
+    path('form',views.formfn),
 
 ]
