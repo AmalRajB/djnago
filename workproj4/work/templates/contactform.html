@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="  height: 100vh;              
+      display: flex;              
+      justify-content: center;    
+      align-items: center;        
+      background-color: #f0f0f0;  
+      margin: 0; ">
+    <form
+    style="background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);"
+    action="" method="POST">
+        {% csrf_token %}
+        <label>name</label><br>
+        {{form.name}}<br>
+        <label>email</label><br>
+        {{form.email}}<br>
+         <label>phone</label><br>
+         {{form.phone}}<br><br>
+         <input type="submit" value="submit">
+    </form>
+</body>
+</html>
