@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .layout{
+            border: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: fit-content;
+            margin-left: 43%;
+            
+        }
+        form{
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline crimson;
+            margin-top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>LogInForm</h1>
+    <div class="layout">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        {{field.label_tag}} <br>
+        {{field}} <br>
+        {{field.errors}} <br> 
+        {% endfor %}
+        <input type="submit" value="login">
+    </form>
+    <p>if you have no account ? <a style="text-decoration: none;" href="{% url 'signup' %}">signup</a> </p>
+</div>
+</body>
+</html>
